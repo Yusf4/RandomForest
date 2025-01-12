@@ -11,6 +11,11 @@ data={
 }
 df=pd.DataFrame(data)
 
+X=df[['Age','Income']]
+y=df['Bought']
+
+X_train,X_test,y_train,y_test=train_test_split(X,y,test_size=0.3,random_state=42)
+
 if __name__ == '__main__':
     print('PyCharm')
 
